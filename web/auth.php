@@ -60,7 +60,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         }
 
-    } elseif ($action === 'register') {
+    }
+    elseif ($action === 'register') {
         // Reģistrē jaunu lietotāju
         $vards = trim($_POST['name'] ?? '');
         $uzvards = trim($_POST['surname'] ?? '');
@@ -142,7 +143,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         session_destroy();
         header('Location: index.php');
         exit();
-    } else {
+    }
+    elseif ($action === 'submit_review') {
+        // Redirect back to rev.php for handling reviews
+        header('Location: rev.php');
+        exit();
+    }
+    else {
         // Neatbilstoša rīcība
         $_SESSION['error'] = 'Neatbilstoša rīcība.';
         header('Location: index.php');

@@ -75,10 +75,10 @@ CREATE TABLE Atsauksme (
 );
 
 INSERT INTO Atsauksme (viesisID, teksts, vertejums, attels) VALUES
-(1, 'Lieliska pieredze, ļoti ieteicams!', 5, 'image1.jpg'),
-(2, 'Pakalpojums bija apmierinošs, bet ir vietas uzlabojumiem.', 3, 'image2.jpg'),
-(4, 'Nebija tā, ko gaidīju, bet bija ok.', 2, 'image3.jpg'),
-(3, 'Fantastisks serviss! Atgriezīšos vēlreiz.', 5, 'image4.jpg'),
-(6, 'Nepatika, nebija labi.', 1, 'image5.jpg'),
-(5, 'Lieliski! Viss bija lieliski.', 4, 'image6.jpg');
+(1, 'Lieliska pieredze, ļoti ieteicams!', 10, 'media/atsauksmes/image1.jpg'),
+(2, 'Pakalpojums bija apmierinošs, bet ir vietas uzlabojumiem.', 8, 'image2.jpg'),
+(4, 'Nebija tā, ko gaidīju, bet bija ok.', 7, 'image3.jpg'),
+(3, 'Fantastisks serviss! Atgriezīšos vēlreiz.', 10, 'image4.jpg'),
+(6, 'Nepatika, nebija labi.', 4, 'image5.jpg'),
+(5, 'Lieliski! Viss bija lieliski.', 9, 'image6.jpg');
 

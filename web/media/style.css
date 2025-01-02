@@ -96,17 +96,47 @@ body {
 
 /* Main Image Styling */
 .main-image {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
     margin-bottom: 20px;
 }
 
 .main-image img {
-    width: 500px;
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #A8D08D;
-    transition: transform 0.3s;
-    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
+
+/* Arrow Styling */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 60px;
+    cursor: pointer;
+    color: #69A366;
+    padding: 10px;
+    transition: color 0.2s;
+    z-index: 1;
+}
+
+.arrow:hover {
+    color: #558C57;
+}
+
+.arrow.left-arrow {
+    left: 30px;
+}
+
+.arrow.right-arrow {
+    right: 30px;
+}
+
 
 .main-image img:hover {
     transform: scale(1.05);
@@ -130,19 +160,6 @@ body {
 
 .thumbnail:hover {
     transform: scale(1.1);
-}
-
-/* Arrow Styling */
-.arrow {
-    font-size: 30px;
-    cursor: pointer;
-    color: #69A366;
-    padding: 10px;
-    transition: color 0.2s;
-}
-
-.arrow:hover {
-    color: #558C57;
 }
 
 /* Modal Styling */
@@ -177,16 +194,17 @@ body {
     cursor: pointer;
 }
 
-/* Authentication Modal Forms */
-#auth-modal form {
+/* Common Styles for Input Fields, Textareas, and Buttons */
+.modal form {
     display: flex;
     flex-direction: column;
 }
 
-#auth-modal input[type="text"],
-#auth-modal input[type="email"],
-#auth-modal input[type="password"],
-#auth-modal input[type="number"] {
+.modal input[type="text"],
+.modal input[type="email"],
+.modal input[type="password"],
+.modal input[type="number"],
+.modal textarea {
     width: 100%;
     padding: 10px;
     margin: 8px 0;
@@ -194,7 +212,7 @@ body {
     border-radius: 5px;
 }
 
-#auth-modal button[type="submit"] {
+.modal button[type="submit"] {
     padding: 10px 20px;
     background-color: #69A366;
     color: white;
@@ -205,23 +223,83 @@ body {
     margin-top: 10px;
 }
 
-#auth-modal button[type="submit"]:hover {
+.modal button[type="submit"]:hover {
     background-color: #558C57;
 }
 
-#auth-modal p {
+.modal p {
     margin-top: 10px;
 }
 
-#auth-modal a {
+.modal a {
     color: #69A366;
     text-decoration: none;
     cursor: pointer;
 }
 
-#auth-modal a:hover {
+.modal a:hover {
     text-decoration: underline;
 }
+
+/* Modal-specific Styles */
+#auth-modal .modal-content,
+#review-modal .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+
+/* Reviews Container */
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #F8F9FB; /* Light background */
+    justify-content: center;
+}
+
+/* Individual Review Box */
+.review {
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Lift effect on hover */
+}
+
+/* Review Content */
+.review h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.review p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Image Styling */
+.review-image {
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
 
 footer{
     background-color: #558C57;
@@ -239,5 +317,5 @@ footer table{
     text-align: center;
 }
 footer th, td{
-    width: 0%;
+    width: 0;
 }

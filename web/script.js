@@ -39,6 +39,10 @@ function openModal(title, description) {
     modal.style.display = 'flex';
 }
 
+function openReviewModal() {
+    document.getElementById("review-modal").style.display = "flex";
+}
+
 // Function to close the image description modal
 function closeModal() {
     modal.style.display = 'none';
@@ -88,11 +92,15 @@ function handleAuthAction(isLoggedIn) {
 
 // Close modals when clicking outside of them
 window.onclick = function(event) {
-    if (event.target == modal) {
+    if (event.target === modal) {
         closeModal();
     }
     const authModal = document.getElementById('auth-modal');
-    if (event.target == authModal) {
+    if (event.target === authModal) {
         authModal.style.display = 'none';
+    }
+    const revModal = document.getElementById('review-modal');
+    if (event.target === revModal) {
+        revModal.style.display = 'none';
     }
 };
