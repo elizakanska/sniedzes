@@ -3,7 +3,7 @@
 let currentIndex = 0;
 const thumbnails = document.querySelectorAll('.thumbnail');
 const mainImage = document.getElementById('center-image');
-const modal = document.getElementById('modal');
+const modal = document.getElementsByClassName('modal');
 const modalTitle = document.getElementById('modal-title');
 const modalDescription = document.getElementById('modal-description');
 
@@ -43,7 +43,7 @@ function openReviewModal() {
     document.getElementById("review-modal").style.display = "flex";
 }
 
-// Function to close the image description modal
+// Function to close the modal
 function closeModal() {
     modal.style.display = 'none';
 }

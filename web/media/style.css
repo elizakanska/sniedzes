@@ -195,16 +195,16 @@ body {
 }
 
 /* Common Styles for Input Fields, Textareas, and Buttons */
-.modal form {
+form {
     display: flex;
     flex-direction: column;
 }
 
-.modal input[type="text"],
-.modal input[type="email"],
-.modal input[type="password"],
-.modal input[type="number"],
-.modal textarea {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
     width: 100%;
     padding: 10px;
     margin: 8px 0;
@@ -212,7 +212,7 @@ body {
     border-radius: 5px;
 }
 
-.modal button[type="submit"] {
+button[type="submit"] {
     padding: 10px 20px;
     background-color: #69A366;
     color: white;
@@ -223,7 +223,7 @@ body {
     margin-top: 10px;
 }
 
-.modal button[type="submit"]:hover {
+button[type="submit"]:hover {
     background-color: #558C57;
 }
 
@@ -243,7 +243,7 @@ body {
 
 /* Modal-specific Styles */
 #auth-modal .modal-content,
-#review-modal .modal-content {
+#review-modal .modal-content{
     background-color: #fff;
     margin: 15% auto;
     padding: 20px;
@@ -298,6 +298,38 @@ body {
     max-width: 100%;
     border-radius: 10px; /* Rounded corners for the image */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.reservation-section{
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    min-width: 150px;
+}
+
+#selected-cottages {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#selected-cottages li {
+    background-color: #f0f0f0;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 
