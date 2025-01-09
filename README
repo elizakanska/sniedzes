@@ -1,0 +1,11 @@
+Programma pieejama https://github.com/elizakanska/sniedzes
+
+Pirmo reizi palaižot programmu faili ir jāpalaiž secīgi:
+init.sql
+hash_pass.php
+index.php
+
+Šī secība ir svarīga, jo oriģinālajiem(paraug) lietotājiem paroles ir iebūvētas,
+bet tas arī rada drošības risku, jo viens no paraug lietotājiem ir Admins.
+Paroles ievades lauki arī paredz šifrētas paroles, kas būs jāatšifrē, tādēļ iekodētās
+paroles vajag šifrēt pirms ievades.
